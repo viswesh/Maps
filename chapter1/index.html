@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #444444;
+            font-weight: 100;
+        }
+        body {
+            background-color: #71808F;
+            margin: 0px;
+        }
+        path {
+            stroke: white;
+            stroke-width: 0.25px;
+            fill: #808080;
+        }
+        .details {
+            top: 0px;
+            visibility: hidden;
+            width: 300px;
+            padding: 30px;
+            height: 100%;
+            opacity: 0.4;
+            position: absolute;
+            background-color: aliceblue;
+            font-size: 50px;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="center">2017 population in review - 16 years old </h1>
+
+<div class="details">
+    <h2 class="country"></h2>
+    <p class="females"></p>
+    <p class="males"></p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.js"></script>
+<script src="src/js/main.js"></script>
+</body>
+</html>
