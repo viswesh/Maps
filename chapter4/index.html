@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #details {
+            position: fixed;
+            height: 200px;
+            background: transparent;
+            color: cadetblue;
+            padding-left: 20px;
+            top:50px;
+        }
+
+        #details .title {
+            color: slategray;
+            font-size: small;
+        }
+
+        #locate {
+            position: fixed;
+            left: 20px;
+            top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+<button id="locate">Locate ISS</button>
+<div id="details"></div>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.js"></script>
+<script src="src/js/main.js"></script>
+</body>
+</html>
