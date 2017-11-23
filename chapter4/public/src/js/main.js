@@ -7,7 +7,7 @@ var map = new mapboxgl.Map({
     zoom: 1
 });
 
-var url = 'http://localhost:5000/';
+var url = 'http://localhost:5000/findiss';
 
 map.on('load', function () {
 
