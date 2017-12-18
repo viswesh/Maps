@@ -7,7 +7,7 @@ var map = new mapboxgl.Map({
     zoom: 1
 });
 
-var url = 'http://localhost:5000/';
+var url = '/findiss';
 
 map.on('load', function () {
 
@@ -20,7 +20,7 @@ map.on('load', function () {
                     issLastSeen = data.features[0].geometry.coordinates,
                     details = data.features[0].properties,
                     resultingDOM = "",
-                    resultingText="";
+                    resultingText = "";
 
                 for (var prop in details) {
                     resultingDOM += "<span class='title'>" + prop.toUpperCase() + "</span>" + " " + details[prop] + "</br>";
@@ -28,7 +28,7 @@ map.on('load', function () {
                 }
 
                 document.getElementById('details').innerHTML = resultingDOM;
-                document.getElementById('detailsEntity').setAttribute("text", "value: "+resultingText);
+                document.getElementById('detailsEntity').setAttribute("text", "value: " + resultingText);
                 document.getElementById('locate').setAttribute("data-coordinate", JSON.stringify(issLastSeen));
 
                 map.getSource('iss').setData(data);
@@ -39,7 +39,7 @@ map.on('load', function () {
 
     }, 2000);
 
-    map.addSource('iss', {type: 'geojson', data: url});
+    map.addSource('iss', { type: 'geojson', data: url });
     map.addLayer({
         "id": "iss",
         "type": "symbol",
